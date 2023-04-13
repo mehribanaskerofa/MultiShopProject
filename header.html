@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/media.css">
+
+</head>
+<body>
+
+    <header class="w">
+        <div class="header" id="header">
+
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-container w">
+                        <div class="header-top-menu">
+                            <ul class="top-menu-list">
+                                <li><a href="./about.html" >About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./index.html">Help</a></li>
+                                <li><a href="">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-top-buttons">
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('account')">
+                                    <span class="top-btn-name">My Account<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="account">
+                                        <li value="SignIn" class="option">Sign in</li>
+                                        <li value="SignOut" class="option">Sign out</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('valuta')">
+                                    <span class="top-btn-name">USD<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="valuta">
+                                        <li value="eur">EUR</li>
+                                        <li value="">GBP</li>
+                                        <li value="">CAD</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('language')">
+                                    <span class="top-btn-name">EN<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="language">
+                                        <li value="">FR</li>
+                                        <li value="">AR</li>
+                                        <li value="">AR</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="header-bottom-buttoms">
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                        </div>
+                        <!-- --- -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-medium">
+                <div class="container">
+                <div class="header-medium-container w">
+                <div class="header-logo">
+                    <p>multi</p>
+                    <p>shop</p>
+                </div>
+                <div class="header-search">
+                    <div class="header-search-item">
+                        <input type="text" placeholder="Search for products" id="search-item" onkeyup="searchItem()">
+                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="header-search-item-text">
+                        <p class="search-item-text" id="search-item-text">Not found</p>
+                    </div>
+                </div>
+                <div class="header-phones">
+                    <div class="header-phone">
+                        <span>Customer Service</span>
+                        <span>+012 345 6789</span>
+                    </div>
+                </div>
+                <div class="responsive-icon" onclick="queryClickOpenClose('.header-medium .responsive-menu')">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="responsive-menu">
+                    <ul class="header-bottom-menu-item">
+                        <li><a href="./index.html" class="home-active-color">Home</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./shopdetails.html" >Shop Details</a></li>
+                        <!-- .responsive-menu  -->
+                        <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-under-list')"><a href="javascript:void(0)" >Pages<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="header-bottom-under-list">
+                                <li><a href="./shoppingcart.html">Shopping cart</a></li>
+                                <li><a href="./checkout.html">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="container">
+                <div class="header-bottom-container w">
+                <div class="category-bottom-flex">
+                <div class="categories-bottoms" onclick="queryClickOpenClose('.categories')">
+                    <div class="category-menu" id="category-menu" ><span><i class="fa-solid fa-bars"></i>Categories</span><i class="fa-solid fa-caret-down"></i></div>
+                        <ul class="categories">
+                            <li class="category-menu-lists"  id="category-menu-lists">
+                                <!-- onclick="queryClickOpenClose('.category-menu-list')" -->
+                               <a href="" class="dress">Dresses </a> <i class="fa-solid fa-caret-down"></i>
+                                <ul class="category-menu-list"   id="category-menu-list">
+                                    <li><a href="">Men dresses</a></li>
+                                    <li><a href="">Women dresses</a></li>
+                                    <li><a href="">Babies dresses</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Swimwear</a></li>
+                            <li><a href="">Sleepwear</a></li>
+                            <li><a href="">Sportswear</a></li>
+                            <li><a href="">Jumpsuits</a></li>
+                            <li><a href="">Blazers</a></li>
+                            <li><a href="">Jackets</a></li>
+                            <li><a href="">Shoes</a></li>
+                        </ul>
+                    
+                </div>
+                <div class="header-bottom-menu">
+                    <div class="header-bottom-menu-items">
+                        <ul class="header-bottom-menu-item">
+                            <li><a href="/index.html" class="home-active-color">Home</a></li>
+                            <li><a href="/shop.html">Shop</a></li>
+                            <li><a href="/shopdetails.html">Shop Details</a></li>
+                            <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-menu .header-bottom-under-list')"><a href="javascript:void(0)">Pages<i class="fa-solid fa-caret-down"></i></a>
+                                <ul class="header-bottom-under-list">
+                                    <li><a href="/shoppingcart.html">Shopping cart</a></li>
+                                    <li><a href="/checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="header-bottom-buttoms">
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+    <script src="/assets/js/header.js"></script>
+</body>
+</html>

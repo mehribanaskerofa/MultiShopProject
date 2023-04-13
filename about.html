@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/media.css">
+
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
+
+    
+<style>
+.about-head{
+    line-height: 25px;
+    font-size: 20px;
+    padding: 20px 0;
+}
+.about{
+    line-height: 20px;
+    font-size: 16px;
+    padding: 20px 0;
+}
+</style>
+
+</head>
+<body>
+    <header class="w">
+        <div class="header" id="header">
+
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-container w">
+                        <div class="header-top-menu">
+                            <ul class="top-menu-list">
+                                <li><a href="./about.html" >About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./index.html">Help</a></li>
+                                <li><a href="">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-top-buttons">
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('account')">
+                                    <span class="top-btn-name">My Account<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="account">
+                                        <li value="SignIn" class="option">Sign in</li>
+                                        <li value="SignOut" class="option">Sign out</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('valuta')">
+                                    <span class="top-btn-name">USD<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="valuta">
+                                        <li value="eur">EUR</li>
+                                        <li value="">GBP</li>
+                                        <li value="">CAD</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('language')">
+                                    <span class="top-btn-name">EN<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="language">
+                                        <li value="">FR</li>
+                                        <li value="">AR</li>
+                                        <li value="">AR</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="header-bottom-buttoms">
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                        </div>
+                        <!-- --- -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-medium">
+                <div class="container">
+                <div class="header-medium-container w">
+                <div class="header-logo">
+                    <p>multi</p>
+                    <p>shop</p>
+                </div>
+                <div class="header-search">
+                    <div class="header-search-item">
+                        <input type="text" placeholder="Search for products" id="search-item" onkeyup="searchItem()">
+                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="header-search-item-text">
+                        <p class="search-item-text" id="search-item-text">Not found</p>
+                    </div>
+                </div>
+                <div class="header-phones">
+                    <div class="header-phone">
+                        <span>Customer Service</span>
+                        <span>+012 345 6789</span>
+                    </div>
+                </div>
+                <div class="responsive-icon" onclick="queryClickOpenClose('.header-medium .responsive-menu')">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="responsive-menu">
+                    <ul class="header-bottom-menu-item">
+                        <li><a href="./index.html" class="home-active-color">Home</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./shopdetails.html" >Shop Details</a></li>
+                        <!-- .responsive-menu  -->
+                        <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-under-list')"><a href="javascript:void(0)" >Pages<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="header-bottom-under-list">
+                                <li><a href="./shoppingcart.html">Shopping cart</a></li>
+                                <li><a href="./checkout.html">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="container">
+                <div class="header-bottom-container w">
+                <div class="category-bottom-flex">
+                <div class="categories-bottoms" onclick="queryClickOpenClose('.categories')">
+                    <div class="category-menu" id="category-menu" ><span><i class="fa-solid fa-bars"></i>Categories</span><i class="fa-solid fa-caret-down"></i></div>
+                        <ul class="categories">
+                            <li class="category-menu-lists"  id="category-menu-lists">
+                                <!-- onclick="queryClickOpenClose('.category-menu-list')" -->
+                               <a href="" class="dress">Dresses </a> <i class="fa-solid fa-caret-down"></i>
+                                <ul class="category-menu-list"   id="category-menu-list">
+                                    <li><a href="">Men dresses</a></li>
+                                    <li><a href="">Women dresses</a></li>
+                                    <li><a href="">Babies dresses</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Swimwear</a></li>
+                            <li><a href="">Sleepwear</a></li>
+                            <li><a href="">Sportswear</a></li>
+                            <li><a href="">Jumpsuits</a></li>
+                            <li><a href="">Blazers</a></li>
+                            <li><a href="">Jackets</a></li>
+                            <li><a href="">Shoes</a></li>
+                        </ul>
+                    
+                </div>
+                <div class="header-bottom-menu">
+                    <div class="header-bottom-menu-items">
+                        <ul class="header-bottom-menu-item">
+                            <li><a href="/index.html" class="home-active-color">Home</a></li>
+                            <li><a href="/shop.html">Shop</a></li>
+                            <li><a href="/shopdetails.html">Shop Details</a></li>
+                            <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-menu .header-bottom-under-list')"><a href="javascript:void(0)">Pages<i class="fa-solid fa-caret-down"></i></a>
+                                <ul class="header-bottom-under-list">
+                                    <li><a href="/shoppingcart.html">Shopping cart</a></li>
+                                    <li><a href="/checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="header-bottom-buttoms">
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="w">
+        <div class="container">
+            <p class="about-head">About</p>
+            <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt hic atque sit debitis fugit voluptatem harum quasi laborum perferendis maiores! Dignissimos magni ipsa officia fugit dolore enim sint inventore neque. Quos sapiente delectus, ex veniam molestias voluptas qui ab porro dignissimos facere, numquam, omnis animi repudiandae consequuntur ipsam nesciunt? Ut fugiat tempora ullam, officia nesciunt dolores temporibus quam pariatur! Explicabo eaque totam suscipit nisi voluptates pariatur itaque, qui, a odio vel dolores. Doloribus officiis eum perspiciatis. Excepturi, ullam aperiam maiores obcaecati molestiae quae deserunt. Distinctio vitae eum pariatur, ipsam consequuntur maxime inventore, blanditiis repellat sapiente accusantium illo beatae officia unde quis libero delectus quos, autem dolorum aut iure molestias hic dignissimos? Minima reiciendis omnis, aut nihil porro fugit. Illo obcaecati, quas harum ratione ad incidunt eum minima distinctio libero aliquid adipisci sequi dolore cum. Cum hic quas saepe iste perspiciatis atque incidunt? Natus aliquam consequuntur dolore accusamus eum maiores tempore veniam doloribus odio, cupiditate fuga saepe, quas reiciendis, sit quia alias nostrum distinctio at incidunt? Itaque et iusto odio rerum error nulla labore ad quisquam tempore! Adipisci nostrum eum obcaecati illo quidem perspiciatis magni quae nihil laboriosam ea eius eaque velit, ducimus corrupti debitis illum, voluptas ad rem nulla inventore? Facilis vitae ut eligendi expedita sunt corporis exercitationem tempore in ab nemo? Id rem, saepe nisi fugit, voluptatum aliquam et perferendis doloremque dignissimos amet impedit excepturi quo similique. Neque ipsum praesentium facilis sint ipsa corporis facere cumque quo? Soluta optio esse neque delectus. Facilis ex deleniti modi necessitatibus, eum rem possimus quisquam expedita magni laudantium natus officiis praesentium adipisci provident libero dolore, obcaecati, debitis ipsa deserunt beatae odit optio ad quas. Tempore minus omnis tenetur at! Alias natus nesciunt soluta. Excepturi culpa fugiat magnam officia, reiciendis qui quibusdam quasi hic libero harum alias, id provident, commodi quos temporibus at praesentium?</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer w">
+            <div class="container">
+                <div class="footer-container w">
+                    <div class="footer-item1">
+                        <div class="footer-head">GET IN TOUCH</div>
+                        <div class="footer-content">
+                            <p>No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
+                            <ul class="footer-content">
+                                <li><i class="fa-solid fa-location-dot"></i>123 Street, New York, USA</li>
+                                <li><i class="fa-solid fa-envelope"></i>mail@domain.com</li>
+                                <li><i class="fa-solid fa-phone"></i>+012 345 67890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item2">
+                        <div class="footer-item">
+                            <div class="footer-head">QUICK SHOP</div>
+                            <ul class="footer-item-list">
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Our Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shop Details</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shopping cart</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Checkout</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-head">MY ACCOUNT</div>
+                            <ul class="footer-item-list">
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Our Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shop Details</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shopping cart</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Checkout</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-head">NEWSLETTER</div>
+                            <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+                            <div class="coupon">
+                                <form action="" class="shopping-coupon-form">
+                                    <div class="coupon-form">
+                                    <input type="text"  value="Your Email Address">
+                                    <input type="submit" class="button-coupon" value="Sign Up">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="footer-item-icons">
+                                <div class="footer-item-icon-head">FOLLOW US</div>
+                                <ul class="footer-icons">
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                    <li><i class="fa-brands fa-facebook"></i></li>
+                                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+
+
+<script src="/assets/js/header.js"></script> 
+</body>
+</html>

@@ -1,0 +1,115 @@
+.footer{
+    color: white;
+    background-color: var(--darked);
+    padding: 30px 0;
+}
+.footer-item1{
+flex: 1;}
+.footer a{
+    color: white;
+}
+.footer-item-icons i{
+    font-family: "Font Awesome 5 Brands" !important;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-head{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.footer-content p,.footer-item p{
+    margin: 40px 0;
+}
+.footer-content i{
+    color: var(--yellowed);
+    margin-right: 10px;
+}
+.footer-item2{
+    display: flex;
+    width: 750px;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+.footer-icons{
+    display: flex;
+}
+.footer-icons li{
+    width: 40px;
+    height: 40px;
+    background-color: var(--yellowed);
+    color: var(--darked);
+    line-height: 40px;
+    text-align: center;
+    margin: 5px;
+}
+.footer-item:last-child{
+    width: 300px;
+}
+.footer-item-list>li{
+    margin: 20px 0;
+}
+.footer-item-list li:hover{
+    text-decoration: underline;
+}
+.footer-item-list li:hover a{
+    color:rgb(168, 162, 162)
+}
+.footer-item-list i{
+    margin-right: 10px;
+}
+.footer-item .button-coupon{
+    /* width: 100%; */
+}
+@media (max-width:1000px) {
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-item1{
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+}
+/* @media (max-width:900px) {
+    .footer-item2{
+         flex-direction: column; 
+    }
+    .footer-container >div{
+        max-width: 80%;
+    }
+} */
+@media (max-width:900px) {
+    .footer-container >div{
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+@media (max-width:800px) {
+    .footer-item2 .footer-item{
+        padding-right: 40px;
+    }
+}
+@media (max-width:400px) {
+    .footer-icons li {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .footer li, .footer p{
+        font-size: 12px;
+    }
+    .footer .coupon-form>input{
+        font-size: 12px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .footer-head, .footer-item-icon-head{
+        font-size: 14px;
+    }
+    .footer .button-coupon{
+        width: 80px;
+        padding: 0;
+    }
+}

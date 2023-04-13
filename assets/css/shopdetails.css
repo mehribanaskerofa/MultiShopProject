@@ -1,0 +1,468 @@
+.socialmedia-icon i{
+    font-family: "Font Awesome 6 Brands" !important;
+    color: var(--dark);
+}
+.shop-product-detail{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    /* background-color: red; */
+    
+}
+.shop-detail-container{
+    background-color: white;
+    flex: 1;
+    color: var(--dark); 
+    height: 600px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px;
+    margin-left: 10px;
+    
+}
+.shop-detail-container>div{
+    margin: 15px 0;
+}
+.shop-detail-head{
+    font-size: 28px;
+    font-weight: bolder;
+    line-height: 32px;
+}
+.shop-detail-price{
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 28px;
+}
+.shop-detail-text{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 18px;
+    color: var(--light-blue);
+}
+.detail-name{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    margin-right: 20px;
+}
+
+.shop-detail-sizes{
+    display: flex;
+}
+.shop-detail-sizes label{
+    color: var(--light-blue);
+}
+/* 
+ .radio_btn {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.radio_btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark_radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio-text{
+    line-height: 18px;
+    font-size: 16px;
+    text-align: center;
+}
+.radio_btn .checkmark_radio:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 5px;
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+}
+.radio_btn:hover input ~ .checkmark_radio {
+        background-color: #f1f1f1;
+}
+.radio_btn input:checked ~ .checkmark_radio {
+        background-color: var(--yellowed);
+}
+.radio_btn input:checked ~ .checkmark_radio:after {
+        display: block;
+}  */
+
+/* .shop-counts{
+    display: flex;
+}
+.shop-count{
+    display: flex;
+}
+.count-btn{
+    width: 40px;
+    height: 40px;
+    background-color: var(--yellowed);
+    line-height: 40px;
+    text-align: center;
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: bolder;
+}
+.shop-counter{
+    width: 50px;
+    height: 40px;
+    background-color: var(--lighter);
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.add-to-basket-btn{
+    width: 180px;
+    background-color: var(--yellowed);
+    padding: 10px 20px;
+    margin: 0 20px;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+} */
+.socialmedia-icons{
+    display: flex;
+}
+.socialmedia-icon i{
+    font-size: 16px;
+    line-height: 18px;
+    margin-right: 13px;
+}
+
+
+.shop-detail-sliders{
+    max-width: 600px;
+    max-height: 600px;
+    background-color: aquamarine;
+}
+.shop-detail-slider{
+    max-width: 600px;
+    max-height: 600px;
+    background-color: antiquewhite;
+}
+.shop-detail-slider-img{
+    max-width: 600px;
+    max-height: 600px;
+}
+.shop-detail-slider-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* .slick-arrow:nth-child(1){
+    position: absolute;
+    left: 20px;
+    z-index: 1;
+
+} */
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -20px 0px 0px 0px;
+    z-index: 10;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+  }
+.slick-arrow.slick-prev {
+    left: 30px;
+    background: url(/assets/img/chevron-left-solid.svg) 0
+      0 / 100% no-repeat;
+      width: 15px;
+
+  }
+ .slick-arrow.slick-next {
+    right: 30px;
+    opacity: 0.6;
+    background: url(/assets/img/chevron-right-solid.svg)  0 0 / 100% no-repeat;
+    width: 15px;
+  }
+ .slick-arrow.slick-disabled {
+    opacity: 0.2;
+  }
+
+
+
+
+  .tab-container{
+    background-color: white;
+    padding: 20px 30px;
+    font-size: 16px;
+
+  }
+  .tab-btns {
+    width: 100%;
+    overflow: hidden;
+    padding: 1px;
+    border-bottom: 1px solid  rgb(209, 204, 204);
+    /* background-color: #f1f1f1; */
+    
+  }
+  .tab-btn {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    z-index: 1;
+  }
+
+  .tab-btn:hover{
+    outline: 1px solid rgb(209, 204, 204);
+    background-color: #f1f1f1;
+    /* z-index: 1; */
+  }
+  .bggrey{
+    outline: 1px solid rgb(209, 204, 204) !important ;
+    background-color: #f1f1f1 !important;
+}
+.tab-context{
+    display: none;
+    color: rgb(90, 87, 87);
+
+}
+.tab-content>div{
+    padding: 20px 0;
+}
+.tab-context:first-child{
+    display: block;
+}
+.tab-head{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: black;
+}
+.tab-text{
+    color: var(--dark);
+    line-height: 26px;
+}
+/* .active{
+    display: block;
+} */
+
+.information-lists{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    margin: 15px 0;
+}
+.info-list{
+    width: 47%;
+}
+.info-list>li{
+    display: block;
+    border-bottom: 1px solid  rgb(161, 156, 156);
+    padding: 14px 0px;
+    /* width: 100%; */
+}
+
+.info-reviews{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* background-color: red; */
+}
+
+.info-review{
+    max-width: 45%;
+}
+.review-img{
+    width: 50px;
+    height: 50px;
+}
+.review-img img{
+    width: 100%;
+    height: 100%;
+}
+.review-content{
+    display: flex;
+    justify-content: space-between;
+}
+.review-context{
+    max-width: 90%;
+}
+.review-fullname{
+    font-size: 16px;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 10px;
+}
+.leave-review{
+    width: 45%;
+}
+.leave-review p{
+    margin-bottom: 20px;
+}
+.leave-review-form input, .leave-review-form textarea{
+    width: 100%;
+    margin: 5px 0 20px;
+    font-size: 16px;
+    padding: 6px 12px;
+}
+.slick-next:before{
+    opacity: 0;
+    margin-left: -10px;
+}
+.slick-prev:before {
+    opacity: 0;
+    margin-left: 10px;
+}
+
+
+
+.shop-detail-items{
+    max-width: 100%;
+}
+.shop-detail-items .product-item{
+    margin: 0 10px;
+}
+.shop-detail-items .product-item{
+    margin: 0 10px;
+}
+.product-item-slider .slick-arrow{
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1000px) {
+    .shop-product-detail{
+        flex-direction: column;
+    }
+    .shop-detail-sliders, 
+    .shop-detail-container, 
+    .tab-container,
+    .shop-slider-detail{
+        width: 100%;
+        margin: 10px auto;
+    }
+    .shop-detail-slider{
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    .info-reviews{
+        flex-direction: column;
+    }
+    .leave-review{
+        width: 100%;
+    }
+    .radio_btn{
+        margin: 5px;
+    }
+    .info-review{
+        max-width: 100% !important;
+        margin-bottom: 30px;
+    }
+    .product-item-slider{
+        margin: 0 auto;
+    }
+    .shop-detail-slider-img{
+        max-width: 100%;
+    }
+    .shop-detail-slider-img img{
+        max-width: 100%;
+    }
+    .shop-detail-container{
+        height: auto; 
+    }
+    .shop-count{
+        padding-left: 25px;
+    }
+    
+    .shop-detail>div{
+        margin: 0;
+    }
+    .product-item-slider .slick-arrow{
+        opacity: 1;
+    }
+    .product-item-img{
+        max-height: auto !important;
+    }
+}
+.radio_btn {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.radio_btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark_radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio-text{
+    line-height: 18px;
+    font-size: 16px;
+    text-align: center;
+}
+.radio_btn .checkmark_radio:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 5px;
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background:white;
+}
+.radio_btn:hover input ~ .checkmark_radio {
+        background-color: var(--lighter);
+}
+.radio_btn input:checked ~ .checkmark_radio {
+        background-color: var(--yellowed) !important;
+}
+.radio_btn input:checked ~ .checkmark_radio:after {
+        display: block !important;
+}
+/* ----- */

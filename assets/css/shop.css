@@ -1,0 +1,169 @@
+/* details------------------------------------------ */
+.shop{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.shop-details{
+    min-width: 23%;
+}
+.shop-detail{
+    width: 100%;
+    margin: 20px 0;
+    font-size: 10px;
+}
+
+.item-head-title{
+    font-size: 20px;
+}
+.shop-detail-items{
+    background-color: white;
+    padding: 20px ;
+    color: var(--light-blue);
+}
+
+
+/* filter------------------------------------------------------------------------ */
+.filter-icons, .filter-properties{
+    display: flex;
+    font-size: 17px;    
+
+}
+.filter-icon{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    position: relative;
+    margin: 5px;
+}
+.filter-icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.filter-property{
+    /* width: 35px; */
+    height: 35px;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    position: relative;
+}
+.filter{
+    line-height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.filter i{
+    margin-left: 6px;
+}
+.sort-item{
+    display: none;
+    width: 145px;
+    /* float: right; */
+    background-color: white;
+    position: absolute;
+    right: 2px;
+    top: 104%;
+    z-index: 1;
+    border: 0.5px solid rgb(211, 203, 203);
+    padding: 5px 10px;
+}
+.sort-item li{
+    padding: 3px 15px;
+}
+
+.shop-products{
+    max-width: 70%;
+}
+.product-item{
+    max-width: 28%;
+}
+@media (max-width:900px) and (min-width:800px){
+    .shop-products{
+        max-width: 60%;
+    }
+}
+@media (max-width:800px){
+    .shop-details{
+        width: 100%;
+    }
+    .shop-products{
+        max-width: 100%;
+    }
+}
+@media (max-width:300px){
+.shop-detail-items {
+    padding: 10px;
+}
+}
+
+.shop-detail-checkbox{
+    /* padding: 10px; */
+}
+.shop-detail-checkbox-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5px;
+    text-transform: capitalize;
+    margin: 15px 10px;
+    cursor: pointer;
+}
+.detail-checkbox-item{
+    display: flex;
+    position: relative;
+}
+.detail-checkbox-item .checkbox-mark{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.detail-checkbox-item .checkmark-item{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    transition: 0.2s ease;
+}
+.detail-checkbox-item .checkmark-item:after{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.detail-checkbox-item:hover input ~ .checkmark-item{
+    background-color: #ccc;
+}
+.detail-checkbox-item input:checked ~ .checkmark-item{
+    background-color: var(--yellowed);
+}
+.detail-checkbox-item .checkbox-mark:checked ~ .checkmark-item:after{
+    display: block;
+}
+.detail-checkbox-item .detail-checkbox-item-text{
+    font-size: 16px;
+    margin-left: 30px;
+    line-height: 28px;
+}
+.shop-item-count{
+    width: 50px;
+}
+.item-count{
+    font-size: 14px;
+    border: 0.5px solid rgb(188, 196, 204);
+    padding:0 3px;
+    float:right;
+}

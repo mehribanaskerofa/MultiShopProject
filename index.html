@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiShop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/media.css">
+
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
+ 
+
+
+</head>
+<body>
+
+    <div class="goto-button animate__animated  animate__slideInDown animate__slower	3s animate__infinite">
+        <a href="#header"><i class="fa-solid fa-angles-up"></i></a>      
+    </div>
+    
+    <header class="w">
+        <div class="header" id="header">
+
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-container w">
+                        <div class="header-top-menu">
+                            <ul class="top-menu-list">
+                                <li><a href="./about.html" >About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./index.html">Help</a></li>
+                                <li><a href="">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-top-buttons">
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('account')">
+                                    <span class="top-btn-name">My Account<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="account">
+                                        <li value="SignIn" class="option">Sign in</li>
+                                        <li value="SignOut" class="option">Sign out</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('valuta')">
+                                    <span class="top-btn-name">USD<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="valuta">
+                                        <li value="eur">EUR</li>
+                                        <li value="">GBP</li>
+                                        <li value="">CAD</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('language')">
+                                    <span class="top-btn-name">EN<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="language">
+                                        <li value="">FR</li>
+                                        <li value="">AR</li>
+                                        <li value="">AR</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="header-bottom-buttoms">
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                        </div>
+                        <!-- --- -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-medium">
+                <div class="container">
+                <div class="header-medium-container w">
+                <div class="header-logo">
+                    <p>multi</p>
+                    <p>shop</p>
+                </div>
+                <div class="header-search">
+                    <div class="header-search-item">
+                        <input type="text" placeholder="Search for products" id="search-item" onkeyup="searchItem()">
+                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="header-search-item-text">
+                        <p class="search-item-text" id="search-item-text">Not found</p>
+                    </div>
+                </div>
+                <div class="header-phones">
+                    <div class="header-phone">
+                        <span>Customer Service</span>
+                        <span>+012 345 6789</span>
+                    </div>
+                </div>
+                <div class="responsive-icon" onclick="queryClickOpenClose('.header-medium .responsive-menu')">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="responsive-menu">
+                    <ul class="header-bottom-menu-item">
+                        <li><a href="./index.html" class="home-active-color">Home</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./shopdetails.html" >Shop Details</a></li>
+                        <!-- .responsive-menu  -->
+                        <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-under-list')"><a href="javascript:void(0)" >Pages<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="header-bottom-under-list">
+                                <li><a href="./shoppingcart.html">Shopping cart</a></li>
+                                <li><a href="./checkout.html">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="container">
+                <div class="header-bottom-container w">
+                <div class="category-bottom-flex">
+                <div class="categories-bottoms" onclick="queryClickOpenClose('.categories')">
+                    <div class="category-menu" id="category-menu" ><span><i class="fa-solid fa-bars"></i>Categories</span><i class="fa-solid fa-caret-down"></i></div>
+                        <ul class="categories">
+                            <li class="category-menu-lists"  id="category-menu-lists">
+                                <!-- onclick="queryClickOpenClose('.category-menu-list')" -->
+                               <a href="" class="dress">Dresses </a> <i class="fa-solid fa-caret-down"></i>
+                                <ul class="category-menu-list"   id="category-menu-list">
+                                    <li><a href="">Men dresses</a></li>
+                                    <li><a href="">Women dresses</a></li>
+                                    <li><a href="">Babies dresses</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Swimwear</a></li>
+                            <li><a href="">Sleepwear</a></li>
+                            <li><a href="">Sportswear</a></li>
+                            <li><a href="">Jumpsuits</a></li>
+                            <li><a href="">Blazers</a></li>
+                            <li><a href="">Jackets</a></li>
+                            <li><a href="">Shoes</a></li>
+                        </ul>
+                    
+                </div>
+                <div class="header-bottom-menu">
+                    <div class="header-bottom-menu-items">
+                        <ul class="header-bottom-menu-item">
+                            <li><a href="/index.html" class="home-active-color">Home</a></li>
+                            <li><a href="/shop.html">Shop</a></li>
+                            <li><a href="/shopdetails.html">Shop Details</a></li>
+                            <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-menu .header-bottom-under-list')"><a href="javascript:void(0)">Pages<i class="fa-solid fa-caret-down"></i></a>
+                                <ul class="header-bottom-under-list">
+                                    <li><a href="/shoppingcart.html">Shopping cart</a></li>
+                                    <li><a href="/checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="header-bottom-buttoms">
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="fashions w">
+        <div class="container">
+        <div class="fashion w">
+            <div class="fashion-left">
+                <div class="fashion-left-slider">
+
+                    <div class="fashion-slider">
+                        <div class="slider-item">
+                            <img  class="slider-img brightless" src="/assets/img/carousel-1.jpg" alt="">
+                            <div class="slider-content">
+                                <h1 class="animate__animated animate__backInDown" data-animation-in="animate__fadeInDown" >Women Fashion</h1>
+                                <p class="animate__animated animate__bounceIn" data-animation-in="animate__fadeInDown" >Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                <div class="slider-btn animate__animated animate__bounceInUp" data-animation-in="animate__fadeInDown">Shop Now</div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/assets/img/carousel-2.jpg" class="brightless" alt="">
+                            <div class="slider-content">
+                                <h1 class="animate__animated animate__backInDown" data-animation-in="animate__fadeInDown" >Women Fashion</h1>
+                                <p class="animate__animated animate__bounceIn" data-animation-in="animate__fadeInDown">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                <div class="slider-btn animate__animated animate__bounceInUp" data-animation-in="animate__fadeInDown" >Shop Now</div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/assets/img/carousel-3.jpg" class="brightless" alt="">
+                            <div class="slider-content">
+                                <h1 class="animate__animated " data-animation-in="animate__fadeInDown" >Women Fashion</h1>
+                                <p class="animate__animated animate__bounceIn" data-animation-in="animate__fadeInDown">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                <div class="slider-btn animate__animated animate__bounceInUp" data-animation-in="animate__fadeInDown">Shop Now</div>
+                            </div>
+                        </div>
+                    </div>
+                                   
+                </div>
+            </div>
+            <div class="fashion-right">
+                <div class="fashion-right-items">
+                    <div class="fashion-right-item hovered">
+                        <img src="/assets/img/offer-1.jpg" alt="" class="brightless">
+                        <div class="fashion-right-item-content">
+                            <div class="fashion-right-item-context">
+                                <div class="fashion-right-item-title">SAVE 20%</div>
+                                <div class="fashion-right-item-text">Special Offer</div>
+                            </div>
+                            <div class="button">Shop now</div>
+                        </div>
+                    </div>
+                    <div class="fashion-right-item hovered">
+                        <img src="/assets/img/offer-2.jpg" alt="" class="brightless">
+                        <div class="fashion-right-item-content">
+                            <div class="fashion-right-item-context">
+                                <div class="fashion-right-item-title">SAVE 20%</div>
+                                <div class="fashion-right-item-text">Special Offer</div>
+                            </div>
+                            <div class="button">Shop now</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="informations w">
+        <div class="information container">
+            <div class="information-items">
+
+                <div class="information-item">
+                    <div class="information-item-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="information-item-text"><span>Quality Product</span></div>
+                </div>
+
+
+
+                <div class="information-item">
+                    <div class="information-item-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <div class="information-item-text"><span>Free Shipping</span></div>
+                </div>
+                <div class="information-item">
+                    <div class="information-item-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <div class="information-item-text"><span>14-Day Return</span></div>
+                </div>
+                <div class="information-item">
+                    <div class="information-item-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <div class="information-item-text"><span>24/7 Support</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories w">
+        <div class="category container">
+            
+            <div class="item-head after">
+                <h1 class="item-head-title">Categories</h1>
+            </div>
+
+            <div class="category-items">
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-1.jpg" alt=""></div>
+                        
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>             
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-3.jpg" alt=""></div> 
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-2.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                       <div class="category-img"><img src="/assets/img/cat-1.jpg" alt=""></div> 
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-2.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-3.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-1.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>             
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-3.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-2.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-1.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-2.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+                    <div class="category-item hovered">
+                        <div class="category-img"><img src="/assets/img/cat-3.jpg" alt=""></div>
+                        <div class="category-item-context">
+                            <div class="category-item-context-title">Category name</div>
+                            <div class="category-item-context-text">Product 100</div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products w">
+        <div class="product container">
+            <div class="item-head after">
+                <h1 class="item-head-title">FEATURED PRODUCTS</h1>
+            </div>
+
+            <div class="product-items" id="product-items">
+
+                <!-- <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                       
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+    <section class="fashions w">
+        <div class="fashion container">
+            <div class="fashion-items">
+                <div class="fashion-right-item h300 hovered">
+                    <img src="/assets/img/offer-1.jpg" alt="" class="brightless h300">
+                    <div class="fashion-right-item-content">
+                        <div class="fashion-right-item-context">
+                            <div class="fashion-right-item-title">SAVE 20%</div>
+                            <div class="fashion-right-item-text">Special Offer</div>
+                        </div>
+                        <div class="button">Shop now</div>
+                    </div>
+                </div>
+                <div class="fashion-right-item h300 hovered">
+                    <img src="/assets/img/offer-2.jpg" alt="" class="brightless">
+                    <div class="fashion-right-item-content">
+                        <div class="fashion-right-item-context">
+                            <div class="fashion-right-item-title">SAVE 20%</div>
+                            <div class="fashion-right-item-text">Special Offer</div>
+                        </div>
+                        <div class="button">Shop now</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products w">
+        <div class="product container">
+            <div class="item-head after">
+                <h1 class="item-head-title">Recent products</h1>
+            </div>
+
+            <div class="product-items">
+
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act none">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-img">
+                        <img src="/assets/img/product-1.jpg" alt="">
+                        <div class="product-act">
+                            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    </div>
+                    <div class="product-item-context">
+                        <div class="product-item-title">Product Name Goes Here</div>
+                        <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="vendors w">
+        <div class="vendor container">
+            <div class="vendor-items">
+                <div class="vendor-item">
+                    <img src="/assets/img/vendor-4.jpg" alt="">
+                </div>
+                <div class="vendor-item">
+                    <img src="/assets/img/vendor-5.jpg" alt="">
+                </div>
+                <div class="vendor-item">
+                    <img src="/assets/img/vendor-4.jpg" alt="">
+                </div>
+                <div class="vendor-item">
+                    <img src="/assets/img/vendor-5.jpg" alt="">
+                </div>
+                <div class="vendor-item">
+                    <img src="/assets/img/vendor-4.jpg" alt="">
+                </div>
+                <div class="vendor-item">
+                    <img src="/assets/img/vendor-5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer w">
+            <div class="container">
+                <div class="footer-container w">
+                    <div class="footer-item1">
+                        <div class="footer-head">GET IN TOUCH</div>
+                        <div class="footer-content">
+                            <p>No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
+                            <ul class="footer-content">
+                                <li><i class="fa-solid fa-location-dot"></i>123 Street, New York, USA</li>
+                                <li><i class="fa-solid fa-envelope"></i>mail@domain.com</li>
+                                <li><i class="fa-solid fa-phone"></i>+012 345 67890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item2">
+                        <div class="footer-item">
+                            <div class="footer-head">QUICK SHOP</div>
+                            <ul class="footer-item-list">
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Our Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shop Details</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shopping cart</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Checkout</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-head">MY ACCOUNT</div>
+                            <ul class="footer-item-list">
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Our Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shop Details</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shopping cart</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Checkout</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-head">NEWSLETTER</div>
+                            <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+                            <div class="coupon">
+                                <form action="" class="shopping-coupon-form">
+                                    <div class="coupon-form">
+                                    <input type="text"  value="Your Email Address">
+                                    <input type="submit" class="button-coupon" value="Sign Up">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="footer-item-icons">
+                                <div class="footer-item-icon-head">FOLLOW US</div>
+                                <ul class="footer-icons">
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                    <li><i class="fa-brands fa-facebook"></i></li>
+                                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/search.js"></script>
+    <script src="/assets/js/basket.js"></script>
+    <script>
+        $(document).ready(function(){                 
+            showAllProducts();
+            addProduct();
+        });
+    </script>
+
+    
+</body>
+</html>

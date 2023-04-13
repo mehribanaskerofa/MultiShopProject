@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Details</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/shopdetails.css">
+    <link rel="stylesheet" href="/assets/css/media.css">
+
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
+  
+</head>
+<body>
+
+    <div class="goto-button animate__animated  animate__slideInDown animate__slower	3s animate__infinite">
+        <a href="#header"  ><i class="fa-solid fa-angles-up"></i></a>      
+    </div>
+
+    <header class="w">
+        <div class="header" id="header">
+
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top-container w">
+                        <div class="header-top-menu">
+                            <ul class="top-menu-list">
+                                <li><a href="./about.html" >About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./index.html">Help</a></li>
+                                <li><a href="">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-top-buttons">
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('account')">
+                                    <span class="top-btn-name">My Account<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="account">
+                                        <li value="SignIn" class="option">Sign in</li>
+                                        <li value="SignOut" class="option">Sign out</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('valuta')">
+                                    <span class="top-btn-name">USD<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="valuta">
+                                        <li value="eur">EUR</li>
+                                        <li value="">GBP</li>
+                                        <li value="">CAD</li>
+                                    </ul>
+                                </div>
+                                <div class="top-btn" id="customComboBox" onclick="customCombobox('language')">
+                                    <span class="top-btn-name">EN<i class="fa-solid fa-caret-down"></i></span>
+                                    <ul  class="topBtn" id="language">
+                                        <li value="">FR</li>
+                                        <li value="">AR</li>
+                                        <li value="">AR</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="header-bottom-buttoms">
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                            <div class="header-bottom-buttom">
+                                <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                            </div>
+                        </div>
+                        <!-- --- -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-medium">
+                <div class="container">
+                <div class="header-medium-container w">
+                <div class="header-logo">
+                    <p>multi</p>
+                    <p>shop</p>
+                </div>
+                <div class="header-search">
+                    <div class="header-search-item">
+                        <input type="text" placeholder="Search for products" id="search-item" onkeyup="searchItem()">
+                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="header-search-item-text">
+                        <p class="search-item-text" id="search-item-text">Not found</p>
+                    </div>
+                </div>
+                <div class="header-phones">
+                    <div class="header-phone">
+                        <span>Customer Service</span>
+                        <span>+012 345 6789</span>
+                    </div>
+                </div>
+                <div class="responsive-icon" onclick="queryClickOpenClose('.header-medium .responsive-menu')">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="responsive-menu">
+                    <ul class="header-bottom-menu-item">
+                        <li><a href="./index.html" class="home-active-color">Home</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./shopdetails.html" >Shop Details</a></li>
+                        <!-- .responsive-menu  -->
+                        <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-under-list')"><a href="javascript:void(0)" >Pages<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="header-bottom-under-list">
+                                <li><a href="./shoppingcart.html">Shopping cart</a></li>
+                                <li><a href="./checkout.html">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="container">
+                <div class="header-bottom-container w">
+                <div class="category-bottom-flex">
+                <div class="categories-bottoms" onclick="queryClickOpenClose('.categories')">
+                    <div class="category-menu" id="category-menu" ><span><i class="fa-solid fa-bars"></i>Categories</span><i class="fa-solid fa-caret-down"></i></div>
+                        <ul class="categories">
+                            <li class="category-menu-lists"  id="category-menu-lists">
+                                <!-- onclick="queryClickOpenClose('.category-menu-list')" -->
+                               <a href="" class="dress">Dresses </a> <i class="fa-solid fa-caret-down"></i>
+                                <ul class="category-menu-list"   id="category-menu-list">
+                                    <li><a href="">Men dresses</a></li>
+                                    <li><a href="">Women dresses</a></li>
+                                    <li><a href="">Babies dresses</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Swimwear</a></li>
+                            <li><a href="">Sleepwear</a></li>
+                            <li><a href="">Sportswear</a></li>
+                            <li><a href="">Jumpsuits</a></li>
+                            <li><a href="">Blazers</a></li>
+                            <li><a href="">Jackets</a></li>
+                            <li><a href="">Shoes</a></li>
+                        </ul>
+                    
+                </div>
+                <div class="header-bottom-menu">
+                    <div class="header-bottom-menu-items">
+                        <ul class="header-bottom-menu-item">
+                            <li><a href="/index.html" class="home-active-color">Home</a></li>
+                            <li><a href="/shop.html">Shop</a></li>
+                            <li><a href="/shopdetails.html">Shop Details</a></li>
+                            <li class="header-bottom-under-lists" onclick="queryClickOpenClose('.header-bottom-menu .header-bottom-under-list')"><a href="javascript:void(0)">Pages<i class="fa-solid fa-caret-down"></i></a>
+                                <ul class="header-bottom-under-list">
+                                    <li><a href="/shoppingcart.html">Shopping cart</a></li>
+                                    <li><a href="/checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="header-bottom-buttoms">
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-heart"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                    <div class="header-bottom-buttom">
+                        <i class="fa-solid fa-basket-shopping"></i><span class="header-bottom-count-style">0</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop-product-details w">
+        <div class="container">
+            <div class="shop-product-detail w">
+            <div class="shop-detail-sliders">
+                <div class="shop-detail-slider">
+                    <div class="shop-detail-slider-img"><img src="/assets/img/product-1.jpg" alt=""></div>
+                    <div class="shop-detail-slider-img"><img src="/assets/img/product-2.jpg" alt=""></div>
+                    <div class="shop-detail-slider-img"><img src="/assets/img/product-3.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="shop-detail-container">
+                <div><h2 class="shop-detail-head">Product Name Goes Here</h2></div>
+                <div><h3 class="shop-detail-price">$150.00</h3></div>
+                <div><p class="shop-detail-text">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no seaNonumy</p></div>
+                <div class="shop-detail-sizes">
+                    <span class="detail-name">Sizes:</span>
+
+
+
+                    <label class="radio_btn">
+                        <input type="radio" name="radio">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">XS</span>
+                    </label>
+
+                    <label class="radio_btn">
+                        <input type="radio" name="radio">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">S</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">M</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">L</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">XL</span>
+                    </label>
+
+                </div>
+                <div class="shop-detail-sizes"><span class="detail-name">Color:</span>
+
+                    <label class="radio_btn">
+                        <input type="radio" name="radio1">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">Black</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio1">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">White</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio1">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">Red</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio1">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">Green</span>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="radio1">
+                        <span class="checkmark_radio"></span>
+                        <span class="radio-text">Yellow</span>
+                    </label>
+
+                </div>
+
+               <div class="shop-counts">
+                <div class="shop-count">
+                    <div class="minus-count-btn count-btn" id="minus-count-btn"><i class="fa-solid fa-minus"></i></div>
+                    <div class="shop-counter" id="shop-counter">1</div>
+                    <div class="plus-count-btn count-btn" id="plus-count-btn"><i class="fa-solid fa-plus"></i></div>
+                </div>
+                <div class="add-to-basket-btn"><i class="fa-solid fa-basket-shopping"></i> Add to Card</div>
+               </div>
+
+               <div class="socialmedia-icons">
+                    <span class="detail-name">Share on:</span>
+                    <div class="socialmedia-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="socialmedia-icon"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="socialmedia-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="socialmedia-icon"><i class="fa-brands fa-pinterest-p"></i></div>
+               </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabs w">
+        <div class="container">
+            <div class="tab-container">
+                <div class="tab-btns">
+                <div class="tab-btn active bggrey" onclick="openTab(event, 'description')"> Description</div>
+                <div class="tab-btn" onclick="openTab(event, 'information')">Information</div>
+                <div class="tab-btn" onclick="openTab(event, 'review')">Reviews (0)</div>
+                </div>
+                <div class="tab-content">
+                <div class="tab-context" id="description">
+                    <div class="tab-head">Product Description</div>
+                    <div class="tab-text">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.
+                        Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</div>
+                </div>
+                <div class="tab-context" id="information">
+                    <div class="tab-head">Additional Information</div>
+                    <div class="tab-text">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.
+                        Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</div>
+                    <div class="information-lists">
+                        <ul class="info-list">
+                            <li>sit erat duo lorem duo ea consetetur, et eirmod takimata.</li>
+                            <li>amet kasd gubergren sit sanctus et lorem eos sadipscing at.</li>
+                            <li>duo amet accusam eirmod nonumy stet et et stet eirmod.</li>
+                            <li>Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.</li>
+                        </ul>
+                        <ul class="info-list">
+                            <li>sit erat duo lorem duo ea consetetur, et eirmod takimata.</li>
+                            <li>amet kasd gubergren sit sanctus et lorem eos sadipscing at.</li>
+                            <li>duo amet accusam eirmod nonumy stet et et stet eirmod.</li>
+                            <li>Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.</li>
+                        </ul>
+                    </div>               
+                    </div>
+                <div class="tab-context" id="review">
+                    <div class="info-reviews">
+                       
+                        <div class="info-review">
+                            <div class="tab-head">1 review for "Product Name"</div>
+                            <div class="review-content">
+                            <div class="review-img"><img src="/assets/img/user.jpg" alt=""></div>
+                            <div class="review-context">
+                                <div class="review-fullname"> John Doe - 01 Jan 2045</div>
+                                <div class="tab-text">Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</div>
+                         
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="leave-review">
+                            <div class="tab-head">Leave a review</div>
+                            <p>Your email address will not be published. Required fields are marked *</p>
+                            <form class="leave-review-form">
+                                <label for="review">Your Review *</label><br>
+                                <textarea id="review"  rows="4" cols="50"></textarea><br>
+                                <label for="name">Your Name *</label><br>
+                                <input type="text"  name="name"><br>
+                                <label for="email">Your Email *</label><br>
+                                <input type="email"  name="email">
+                                <div class="button">Leave Your Review</div>
+                              </form>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+   
+    <section class="shop-details w">
+        <div class="container">
+        <div class="shop-slider-detail w">
+            <div class="item-head after">
+                <h1 class="item-head-title">YOU MAY ALSO LIKE</h1>
+            </div>
+            <div class="shop-detail-items">
+                <div class="product-item-slider">
+                    <div class="product-item">
+                        <div class="product-item-img">
+                            <img src="/assets/img/product-1.jpg" alt="">
+                           
+                            <div class="product-act ">
+                                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
+                                <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+    
+    
+    
+                        </div>
+                        <div class="product-item-context">
+                            <div class="product-item-title">Product Name Goes Here</div>
+                            <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-item-img">
+                            <img src="/assets/img/product-2.jpg" alt="">
+                           
+                            <div class="product-act ">
+                                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
+                                <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+    
+    
+    
+                        </div>
+                        <div class="product-item-context">
+                            <div class="product-item-title">Product Name Goes Here</div>
+                            <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-item-img">
+                            <img src="/assets/img/product-3.jpg" alt="">
+                           
+                            <div class="product-act ">
+                                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
+                                <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+    
+    
+    
+                        </div>
+                        <div class="product-item-context">
+                            <div class="product-item-title">Product Name Goes Here</div>
+                            <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-item-img">
+                            <img src="/assets/img/product-1.jpg" alt="">
+                           
+                            <div class="product-act ">
+                                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
+                                <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+    
+    
+    
+                        </div>
+                        <div class="product-item-context">
+                            <div class="product-item-title">Product Name Goes Here</div>
+                            <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-item-img">
+                            <img src="/assets/img/product-3.jpg" alt="">
+                           
+                            <div class="product-act ">
+                                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
+                                <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+    
+    
+    
+                        </div>
+                        <div class="product-item-context">
+                            <div class="product-item-title">Product Name Goes Here</div>
+                            <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-item-img">
+                            <img src="/assets/img/product-2.jpg" alt="">
+                           
+                            <div class="product-act ">
+                                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href=""><i class="fa-regular fa-heart"></i></a>
+                                <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+    
+    
+    
+                        </div>
+                        <div class="product-item-context">
+                            <div class="product-item-title">Product Name Goes Here</div>
+                            <div class="product-item-text"><span>$123.00</span><span class="overline">$123.00</span></div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+        </div>
+    </section>
+
+  
+
+    <footer>
+        <div class="footer w">
+            <div class="container">
+                <div class="footer-container w">
+                    <div class="footer-item1">
+                        <div class="footer-head">GET IN TOUCH</div>
+                        <div class="footer-content">
+                            <p>No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
+                            <ul class="footer-content">
+                                <li><i class="fa-solid fa-location-dot"></i>123 Street, New York, USA</li>
+                                <li><i class="fa-solid fa-envelope"></i>mail@domain.com</li>
+                                <li><i class="fa-solid fa-phone"></i>+012 345 67890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item2">
+                        <div class="footer-item">
+                            <div class="footer-head">QUICK SHOP</div>
+                            <ul class="footer-item-list">
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Our Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shop Details</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shopping cart</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Checkout</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-head">MY ACCOUNT</div>
+                            <ul class="footer-item-list">
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Our Shop</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shop Details</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Shopping cart</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Checkout</a></li>
+                                <li><a href=""><i class="fa-solid fa-chevron-right"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-head">NEWSLETTER</div>
+                            <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+                            <div class="coupon">
+                                <form action="" class="shopping-coupon-form">
+                                    <div class="coupon-form">
+                                    <input type="text"  value="Your Email Address">
+                                    <input type="submit" class="button-coupon" value="Sign Up">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="footer-item-icons">
+                                <div class="footer-item-icon-head">FOLLOW US</div>
+                                <ul class="footer-icons">
+                                    <li><i class="fa-brands fa-twitter"></i></li>
+                                    <li><i class="fa-brands fa-facebook"></i></li>
+                                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                                    <li><i class="fa-brands fa-instagram"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+      <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/shopdetails.js">
+// $(document).ready(function(){
+// $('.shop-detail-slider').slick({
+//   infinite: true,
+//   speed: 300,
+//   slidesToShow: 1,
+//   adaptiveHeight: true,
+//   fade: true,
+//   cssEase: 'linear'
+// });
+// });
+
+
+    </script>
+
+</body>
+</html>
